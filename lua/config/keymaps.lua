@@ -1,0 +1,5 @@
+vim.keymap.set('n', '-', 'o<esc>', { desc = 'Add line below' })
+vim.keymap.set('n', '_', 'O<esc>', { desc = 'Add line above' })
+vim.keymap.set('n', '<s-k>', '"_dd', { desc = 'Kill line (no yank)' })
+vim.keymap.set('n', '<c-s>', ':w<cr>', { desc = 'QuickSave' })
+vim.keymap.set('i', '<c-s>', '<esc>:w<cr>a', { desc = 'QuickSave' })
