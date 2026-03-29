@@ -1,0 +1,17 @@
+- Highlight word under cursor w/o searching
+- Display containing function/class name
+- Port "zn" custom command (scroll current line to 25% from the top of the window)
+- Emacs-style nav for insert mode
+- Python highlighting for SConscript files
+- Local site customization schema for work-only stuff
+- camelCase motion objects
+- Toggle comments for line and blocks
+- Alternate config shortcuts for phasing in new config at work
+
+- Re-scrape work nvim and OG vim configs
+
+- Buffer plugin
+- Filesystem plugin
+- Tabline plugin
+- git plugin
+
