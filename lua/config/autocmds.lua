@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
     buffer = 0, -- FIXME what does this do?
     desc = "Set up Ouroboros toggle hotkey",
     callback = function()
-        vim.keymap.set('n', '<C-e>', ':Ouroboros<cr>', {
+        vim.keymap.set('n', '<C-a>', ':Ouroboros<cr>', {
             desc = 'Toggle between header and implementation',
             buffer = 0 -- FIXME doesn't seem to work?
         })

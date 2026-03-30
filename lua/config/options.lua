@@ -6,6 +6,7 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.autochdir = true
+vim.opt.ignorecase = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
