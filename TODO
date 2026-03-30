@@ -9,6 +9,7 @@
 - treesitter
 - LSP
 
+- Scrape kickstart.vim
 - Re-scrape work nvim and OG vim configs
 
 - Buffer plugin
