@@ -6,7 +6,6 @@
 - Local site customization schema for work-only stuff
 - camelCase motion objects
 - Toggle comments for line and blocks
-- Alternate config shortcuts for phasing in new config at work
 
 - Re-scrape work nvim and OG vim configs
 
