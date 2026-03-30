@@ -10,6 +10,7 @@
 - LSP
 
 - Scrape kickstart.vim
+- Scrape work setups (comand, steinbach, etc)
 - Re-scrape work nvim and OG vim configs
 
 - Buffer plugin
