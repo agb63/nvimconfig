@@ -4,8 +4,8 @@ local customAutos = vim.api.nvim_create_augroup("CustomAutos", { clear = true })
 
 -- autocmd! Filetype c,cpp map<buffer> <C-e> :Ouroboros<CR>
 vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp", "cxx", "h", "hpp" },
     group = customAutos,
-    buffer = 0, -- FIXME what does this do?
     desc = "Set up Ouroboros toggle hotkey",
     callback = function()
         vim.keymap.set('n', '<C-a>', ':Ouroboros<cr>', {
