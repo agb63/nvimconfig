@@ -6,6 +6,8 @@
 - Local site customization schema for work-only stuff
 - camelCase motion objects
 - Toggle comments for line and blocks
+- treesitter
+- LSP
 
 - Re-scrape work nvim and OG vim configs
 
