@@ -8,6 +8,7 @@
 - Toggle comments for line and blocks
 - treesitter
 - LSP
+- curated/randomized colorscheme
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
