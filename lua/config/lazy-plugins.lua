@@ -1,5 +1,6 @@
 plugins = {
-    require 'plugins.catppuccin'
+    require 'plugins.catppuccin',
+    require 'plugins.ouroboros'
 }
 
 opts = {}
