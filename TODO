@@ -1,4 +1,3 @@
-- Highlight word under cursor w/o searching
 - Display containing function/class name
 - Port "zn" custom command (scroll current line to 25% from the top of the window)
 - Emacs-style nav for insert mode
