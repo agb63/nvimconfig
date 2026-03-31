@@ -2,15 +2,25 @@
 -- Prevent collisions with custom group
 local customAutos = vim.api.nvim_create_augroup("CustomAutos", { clear = true })
 
--- autocmd! Filetype c,cpp map<buffer> <C-e> :Ouroboros<CR>
+-- Jump between h and cpp
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "c", "cpp", "cxx", "h", "hpp" },
     group = customAutos,
-    desc = "Set up Ouroboros toggle hotkey",
+    desc = "Set Ouroboros toggle hotkey",
     callback = function()
         vim.keymap.set('n', '<C-a>', ':Ouroboros<cr>', {
             desc = 'Toggle between header and implementation',
             buffer = 0 -- FIXME doesn't seem to work?
         })
+    end
+})
+
+-- Fix formatoptions (autocmd so it wins over ftplugins)
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    group = customAutos,
+    desc = "Disable auto comment leader in formatoptions",
+    callback = function()
+        vim.opt.formatoptions:remove({ 'r', 'o' })
     end
 })
