@@ -10,6 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
         vim.keymap.set('n', '<C-a>', ':Ouroboros<cr>', {
             desc = 'Toggle between header and implementation',
+            silent = true,
             buffer = 0 -- FIXME doesn't seem to work?
         })
     end
