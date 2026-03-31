@@ -65,11 +65,12 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-    'n', '<leader>fg',
+    'n', '<leader>fp',
     function()
-        require('telescope.builtin').live_grep()
+        -- Explicitly pass cwd in case autochdir is set
+        require('telescope').extensions.file_browser.file_browser({ path = vim.fn.getcwd() })
     end,
-    { desc = 'Telescope live grep' }
+    { desc = 'Telescope browse files' }
 )
 
 vim.keymap.set(
@@ -78,6 +79,14 @@ vim.keymap.set(
         require('telescope.builtin').buffers()
     end,
     { desc = 'Telescope buffers' }
+)
+
+vim.keymap.set(
+    'n', '<leader>fg',
+    function()
+        require('telescope.builtin').live_grep()
+    end,
+    { desc = 'Telescope live grep' }
 )
 
 vim.keymap.set(
