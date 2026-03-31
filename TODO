@@ -8,6 +8,7 @@
 - treesitter
 - LSP
 - curated/randomized colorscheme
+- display tree root dir in statusline
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
