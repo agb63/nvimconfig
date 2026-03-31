@@ -5,6 +5,14 @@ return {
             'nvim-lua/plenary.nvim',
             -- optional but recommended
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        },
+        opts = {
+            pickers = {
+                buffers = {
+                  sort_lastused = true,
+                  theme = "dropdown"
+                }
+            }
         }
     }
 }
