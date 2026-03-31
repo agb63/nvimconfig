@@ -1,10 +1,21 @@
+-- Shortcuts
 vim.keymap.set('n', '-', 'o<esc>', { desc = 'Add line below' })
 vim.keymap.set('n', '_', 'O<esc>', { desc = 'Add line above' })
 vim.keymap.set('n', '<s-k>', '"_dd', { desc = 'Kill line (no yank)' })
 vim.keymap.set('n', '<c-s>', ':w<cr>', { desc = 'QuickSave' })
 vim.keymap.set('i', '<c-s>', '<esc>:w<cr>a', { desc = 'QuickSave' })
 
--- Highlight word under cursor without searching
+vim.keymap.set(
+    'n', '<leader>cd',
+    function()
+        --':cd %:p:h<CR>:pwd<CR>',
+        local buffDir = vim.fn.expand('%:p:h')
+        vim.fn.chdir(buffDir)
+    end,
+    { desc = 'Change directory to current buffer'}
+)
+
+-- Highlight without searching
 vim.keymap.set(
     'n', '<leader>f',
     function()
@@ -41,4 +52,38 @@ vim.keymap.set(
         silent = true,
         noremap = true
     }
+)
+
+-- Telescope keybinds (deferred load via callbacks)
+vim.keymap.set(
+    'n', '<leader>ff',
+    function()
+        -- Explicitly pass cwd in case autochdir is set
+        require('telescope.builtin').find_files({ cwd = vim.fn.getcwd() })
+    end,
+    { desc = 'Telescope find files' }
+)
+
+vim.keymap.set(
+    'n', '<leader>fg',
+    function()
+        require('telescope.builtin').live_grep()
+    end,
+    { desc = 'Telescope live grep' }
+)
+
+vim.keymap.set(
+    'n', '<leader>fb',
+    function()
+        require('telescope.builtin').buffers()
+    end,
+    { desc = 'Telescope buffers' }
+)
+
+vim.keymap.set(
+    'n', '<leader>fh',
+    function()
+        require('telescope.builtin').help_tags()
+    end,
+    { desc = 'Telescope help tags' }
 )
