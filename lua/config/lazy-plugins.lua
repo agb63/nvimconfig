@@ -3,6 +3,7 @@ plugins = {
     require 'plugins.ouroboros',
     require 'plugins.telescope',
     require 'plugins.telescope-file-browser',
+    require 'plugins.todo-comments',
     require 'plugins.tokyonight',
 }
 

@@ -1,4 +1,4 @@
--- Shortcuts
+-- General shortcuts
 vim.keymap.set('n', '-', 'o<esc>', { desc = 'Add line below' })
 vim.keymap.set('n', '_', 'O<esc>', { desc = 'Add line above' })
 vim.keymap.set('n', '<s-k>', '"_dd', { desc = 'Kill line (no yank)' })
@@ -54,7 +54,7 @@ vim.keymap.set(
     }
 )
 
--- Telescope keybinds (deferred load via callbacks)
+-- Telescope plugin
 vim.keymap.set(
     'n', '<leader>ff',
     function()
@@ -95,4 +95,16 @@ vim.keymap.set(
         require('telescope.builtin').help_tags()
     end,
     { desc = 'Telescope help tags' }
+)
+
+-- TodoComments plugin
+vim.keymap.set(
+    'n', '<leader>fc',
+    function()
+        -- Explicitly pass cwd in case autochdir is set
+        --require('todo-comments').todo_telescope({ cwd = vim.fn.getcwd() })
+        vim.cmd('TodoTelescope cwd=' .. vim.fn.getcwd())
+        --require("todo-comments").jump_prev()
+    end,
+    { desc = 'Telescope TODO/FIXME comments' }
 )
