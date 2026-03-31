@@ -34,7 +34,7 @@ vim.keymap.set(
 vim.keymap.set(
     'n', '<leader>c',
     function()
-        vim.opt.hlsearch = false
+        vim.cmd.nohlsearch()
     end,
     {
         desc = 'Clear highlighting',
