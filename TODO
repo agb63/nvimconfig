@@ -7,6 +7,7 @@
 - treesitter
 - LSP
 - display tree root dir in statusline
+- config structure to allow disabling a plugin AND ALL its manual binds and autocmds
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
@@ -17,4 +18,6 @@
 - Statusline plugin
 - git plugin
 - blink-cmp plugin?
+- codecompanion.nvim AI plugin
+- harpoon plugin
 
