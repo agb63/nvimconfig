@@ -7,6 +7,8 @@
 - LSP
 - display tree root dir in statusline
 - config structure to allow disabling a plugin AND ALL its manual binds and autocmds
+- figure out "diagnostics"
+- lualine slot priorities
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
