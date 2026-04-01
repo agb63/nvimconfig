@@ -8,12 +8,30 @@ vim.keymap.set('i', '<c-s>', '<esc>:w<cr>a', { desc = 'QuickSave' })
 vim.keymap.set(
     'n', '<leader>cd',
     function()
-        --':cd %:p:h<CR>:pwd<CR>',
         local buffDir = vim.fn.expand('%:p:h')
         vim.fn.chdir(buffDir)
     end,
     { desc = 'Change directory to current buffer'}
 )
+
+-- Emacs-style nav/editing
+vim.keymap.set('i', '<C-b>', '<left>')
+vim.keymap.set('i', '<C-f>', '<right>')
+vim.keymap.set('i', '<C-p>', '<up>')
+vim.keymap.set('i', '<C-n>', '<down>')
+vim.keymap.set('i', '<C-a>', '<home>')
+vim.keymap.set('i', '<C-e>', '<end>')
+vim.keymap.set('i', '<C-d>', '<del>')
+vim.keymap.set('i', '<C-k>', '<C-o>C')
+
+vim.keymap.set('c', '<C-b>', '<left>')
+vim.keymap.set('c', '<C-f>', '<right>')
+vim.keymap.set('c', '<C-a>', '<home>')
+vim.keymap.set('c', '<C-e>', '<end>')
+vim.keymap.set('c', '<C-d>', '<del>')
+vim.keymap.set(
+    'c', '<C-k>',
+    '<C-\\>estrpart(getcmdline(), 0, getcmdpos() - 1)<cr>')
 
 -- Highlight without searching
 vim.keymap.set(
