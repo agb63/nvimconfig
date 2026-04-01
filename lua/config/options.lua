@@ -9,6 +9,10 @@ vim.opt.autochdir = true
 vim.opt.ignorecase = true
 vim.opt.wrap = false
 
+-- Explicitly disable these to avoid treesitter conflicts
+vim.opt.cindent = false
+vim.opt.smartindent = false
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
