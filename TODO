@@ -7,7 +7,6 @@
 - Toggle comments for line and blocks
 - treesitter
 - LSP
-- curated/randomized colorscheme
 - display tree root dir in statusline
 
 - Scrape kickstart.vim
