@@ -1,6 +1,7 @@
 plugins = {
     require 'plugins.catppuccin',
     require 'plugins.lualine',
+    require 'plugins.neo-tree',
     require 'plugins.nvim-treesitter',
     require 'plugins.ouroboros',
     require 'plugins.telescope',
