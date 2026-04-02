@@ -1,3 +1,4 @@
+- Port/equivalent to "find" setup at work
 - Display containing function/class name
 - Port "zn" custom command (scroll current line to 25% from the top of the window)
 - Python highlighting for SConscript files
