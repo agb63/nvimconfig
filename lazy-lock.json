@@ -8,6 +8,7 @@
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-lspconfig": { "branch": "master", "commit": "8e2084bf5e40c79c1f42210a6ef96a0a4793a763" },
   "nvim-treesitter": { "branch": "main", "commit": "c82bf96f0a773d85304feeb695e1e23b2207ac35" },
+  "nvim-treesitter-context": { "branch": "master", "commit": "adf4b6b0420b7be6c717ef0ac7993183d6c201b1" },
   "nvim-web-devicons": { "branch": "master", "commit": "d7462543c9e366c0d196c7f67a945eaaf5d99414" },
   "ouroboros": { "branch": "master", "commit": "19b88ad051dbf79a8b498f99ba5d2978aaa90b20" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },

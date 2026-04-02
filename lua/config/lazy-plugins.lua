@@ -10,6 +10,7 @@ local plugins = {
     require 'plugins.telescope-file-browser',
     require 'plugins.todo-comments',
     require 'plugins.tokyonight',
+    require 'plugins.treesitter-context',
     require 'plugins.window-picker',
 }
 
