@@ -1,6 +1,8 @@
 local plugins = {
+    require 'plugins.colors.catppuccin',
+    require 'plugins.colors.tokyonight',
+    --
     require 'plugins.blink',
-    require 'plugins.catppuccin',
     require 'plugins.fugitive',
     require 'plugins.indent-blankline',
     require 'plugins.lualine',
@@ -11,7 +13,6 @@ local plugins = {
     require 'plugins.telescope',
     require 'plugins.telescope-file-browser',
     require 'plugins.todo-comments',
-    require 'plugins.tokyonight',
     require 'plugins.treesitter-context',
     require 'plugins.window-picker',
 }
