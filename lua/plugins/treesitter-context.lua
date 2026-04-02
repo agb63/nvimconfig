@@ -1,7 +1,10 @@
 return {
     'nvim-treesitter/nvim-treesitter-context',
     config = function()
-        require('treesitter-context').setup({ max_lines = 2 })
+        require('treesitter-context').setup({
+            enable = false,  -- we want to manually enable via hotkey
+            max_lines = 2
+        })
 
         -- Toggle
         vim.keymap.set(
