@@ -1,6 +1,7 @@
 local plugins = {
     require 'plugins.catppuccin',
     require 'plugins.fugitive',
+    require 'plugins.indent-blankline',
     require 'plugins.lualine',
     require 'plugins.mason-lspconfig',
     require 'plugins.neo-tree',
