@@ -10,11 +10,9 @@ return {
     config = function()
         require('neo-tree').setup({
             close_if_last_window = true,
-            buffers = {
-                window = {
-                    mappings = {
-                        ["f"] = { "open", config = { close_window = true } },
-                    },
+            window = {
+                mappings = {
+                    ['/'] = 'noop' -- pass-through to native search operator
                 },
             },
         })
