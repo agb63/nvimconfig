@@ -1,4 +1,4 @@
-local langs = { 'c', 'cpp', 'lua', 'python', 'usd' }  
+local langs = { 'c', 'cpp', 'lua', 'python', 'usd' }
 
 return {
     {
