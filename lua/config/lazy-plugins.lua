@@ -1,4 +1,5 @@
 local plugins = {
+    require 'plugins.blink',
     require 'plugins.catppuccin',
     require 'plugins.fugitive',
     require 'plugins.indent-blankline',
