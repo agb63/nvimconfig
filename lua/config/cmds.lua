@@ -1,14 +1,14 @@
 local function tableDifference(a, b)
-  local b_set = {}
-  for _, v in ipairs(b) do b_set[v] = true end
+    local b_set = {}
+    for _, v in ipairs(b) do b_set[v] = true end
 
-  local result = {}
-  for _, v in ipairs(a) do
-    if not b_set[v] then
-      table.insert(result, v)
+    local result = {}
+    for _, v in ipairs(a) do
+        if not b_set[v] then
+            table.insert(result, v)
+        end
     end
-  end
-  return result
+    return result
 end
 
 vim.api.nvim_create_user_command(
