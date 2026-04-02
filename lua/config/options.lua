@@ -8,6 +8,7 @@ vim.opt.tabstop = 4
 vim.opt.autochdir = true
 vim.opt.ignorecase = true
 vim.opt.wrap = false
+vim.opt.signcolumn = 'yes'
 
 -- Explicitly disable these to avoid treesitter conflicts
 vim.opt.cindent = false
