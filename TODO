@@ -4,7 +4,7 @@
 - Local site customization schema for work-only stuff
 - camelCase motion objects
 - Toggle comments for line and blocks
-- LSP
+- LSP config and binds
 - display tree root dir in statusline
 - config structure to allow disabling a plugin AND ALL its manual binds and autocmds
 - figure out "diagnostics"
