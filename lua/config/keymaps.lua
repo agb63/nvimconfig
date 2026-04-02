@@ -73,6 +73,20 @@ vim.keymap.set(
     }
 )
 
+-- Inlay hints
+vim.keymap.set(
+    'n', '<leader>i',
+    function()
+        vim.lsp.inlay_hint.enable(
+            not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
+    end,
+    {
+        desc = 'Toggle inlay hints',
+        silent = true,
+        noremap = true
+    }
+)
+
 -- Telescope plugin
 vim.keymap.set(
     'n', '<leader>ff',
