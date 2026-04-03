@@ -14,6 +14,7 @@ local plugins = {
     require 'plugins.telescope-file-browser',
     require 'plugins.todo-comments',
     require 'plugins.treesitter-context',
+    require 'plugins.which-key',
     require 'plugins.window-picker',
 }
 
