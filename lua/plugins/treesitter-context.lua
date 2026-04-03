@@ -3,7 +3,9 @@ return {
     config = function()
         require('treesitter-context').setup({
             enable = false,  -- we want to manually enable via hotkey
-            max_lines = 2
+            max_lines = 2,
+            mode = 'topline',
+            multiline_threshold = 10,
         })
 
         -- Toggle
