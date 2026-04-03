@@ -21,6 +21,7 @@
 - Filesystem plugin
 - Statusline plugin
 - git plugin
+- gitsigns plugin
 - blink-cmp plugin?
 - codecompanion.nvim AI plugin
 - harpoon plugin
