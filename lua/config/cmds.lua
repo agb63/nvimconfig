@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command(
         math.randomseed(os.time())
         vim.cmd.colorscheme(
             schemes[math.random(#schemes)])
-        print(vim.g.colors_name)
+        print('colorscheme ' .. vim.g.colors_name)
     end,
     {}
 )
