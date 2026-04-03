@@ -10,6 +10,8 @@
 - config structure to allow disabling a plugin AND ALL its manual binds and autocmds
 - figure out "diagnostics"
 - lualine slot priorities
+- make context plugin always show owning func/class (not if/for/etc)
+- turn off completion for non-code files
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
