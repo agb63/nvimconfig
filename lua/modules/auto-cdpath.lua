@@ -40,6 +40,7 @@ local function load(rootPath, leafMarkerFilename, cacheFilePath)
 
     if #ownerPaths == 0 then
         -- FIXME add exclude dirs to site config
+        -- FIXME this is too slow for ldap
         --
         -- Recompute from scratch
         local matches = vim.fn.globpath(
