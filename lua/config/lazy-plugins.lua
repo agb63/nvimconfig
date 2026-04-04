@@ -16,6 +16,7 @@ local plugins = {
     require 'plugins.treesitter-context',
     require 'plugins.which-key',
     require 'plugins.window-picker',
+    require 'plugins.smartcolumn',
 }
 
 local opts = {}
