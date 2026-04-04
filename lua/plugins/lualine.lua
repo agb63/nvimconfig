@@ -14,7 +14,9 @@ local function buffDirName()
     return vim.fn.fnamemodify(path, ":h:t")
 end
 
-local getTreeName = require('modules.auto-cdpath').getTreeName
+local function getTreeName()
+    return require('modules.auto-cdpath').getTreeName() or ''
+end
 
 return {
     {
