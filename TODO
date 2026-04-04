@@ -12,6 +12,7 @@
 - lualine slot priorities
 - make context plugin always show owning func/class (not if/for/etc)
 - turn off completion for non-code files
+- custom cmd to copy selected block and comment out the original
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
