@@ -1,18 +1,20 @@
-local function buffFileName()
-    local path = vim.api.nvim_buf_get_name(0)                                                                              
-    return vim.fn.fnamemodify(path, ":t")
-end
+-- local function buffFileName()
+--     local path = vim.api.nvim_buf_get_name(0)
+--     return vim.fn.fnamemodify(path, ":t")
+-- end
+--
+-- local function buffShortPath()
+--     return buffDirName() .. "/" .. buffFileName()
+-- end
 
 -- FIXME this could maybe give the relative path to the nearest ancestor dir
 -- that contains a SConscript
-local function buffDirName()                                                                                          
-    local path = vim.api.nvim_buf_get_name(0)                                                                              
-    return vim.fn.fnamemodify(path, ":h:t")                                                                                
-end    
-
-local function buffShortPath()
-    return buffDirName() .. "/" .. buffFileName()
+local function buffDirName()
+    local path = vim.api.nvim_buf_get_name(0)
+    return vim.fn.fnamemodify(path, ":h:t")
 end
+
+local getTreeName = require('modules.auto-cdpath').getTreeName
 
 return {
     {
@@ -52,8 +54,9 @@ return {
                 }
             },
             sections = {
+                -- FIXME tweak this some more
                 lualine_a = {'mode'},
-                lualine_b = { buffDirName },
+                lualine_b = { getTreeName, buffDirName },
                 lualine_c = { '%t %r%m' }, -- filename, read-only, modified
                 lualine_x = {'branch', 'diff', 'diagnostics'},
                 lualine_y = {'filetype'},
