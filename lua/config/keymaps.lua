@@ -3,8 +3,8 @@ vim.keymap.set('n', '-', 'o<esc>', { desc = 'Add line below' })
 vim.keymap.set('n', '_', 'O<esc>', { desc = 'Add line above' })
 -- FIXME conflicts with default lsp mapping
 -- vim.keymap.set('n', '<s-k>', '"_dd', { desc = 'Kill line (no yank)' })
-vim.keymap.set('n', '<c-s>', ':w<cr>', { desc = 'QuickSave' })
-vim.keymap.set('i', '<c-s>', '<esc>:w<cr>a', { desc = 'QuickSave' })
+vim.keymap.set('n', '<C-s>', ':w<cr>', { desc = 'QuickSave' })
+vim.keymap.set('i', '<C-s>', '<esc>:w<cr>a', { desc = 'QuickSave' })
 
 vim.keymap.set(
     'n', '<leader>cd',
@@ -33,6 +33,16 @@ vim.keymap.set('c', '<C-d>', '<del>')
 vim.keymap.set(
     'c', '<C-k>',
     '<C-\\>estrpart(getcmdline(), 0, getcmdpos() - 1)<cr>')
+
+-- Window navigation
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Navigate to window at left' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Navigate to window below' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Navigate to window above' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Navigate to window at right' })
+
+-- FIXME vim.lsp.buf.rename() ?
+vim.keymap.set('n', '<leader>r', ':%s/<C-R><C-W>/',
+               { desc = 'Search and replace word under cursor' })
 
 -- Highlight without searching
 vim.keymap.set(
