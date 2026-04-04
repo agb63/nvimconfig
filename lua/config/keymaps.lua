@@ -67,9 +67,19 @@ vim.keymap.set(
         vim.cmd.nohlsearch()
     end,
     {
-        desc = 'Clear highlighting',
+        desc = 'Clear highlight',
         silent = true,
         noremap = true
+    }
+)
+
+vim.keymap.set(
+    'n', '<leader>t',
+    function()
+        vim.opt.hlsearch = not vim.opt.hlsearch:get()
+    end,
+    {
+        desc = 'Toggle search highlight'
     }
 )
 

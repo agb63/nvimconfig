@@ -35,3 +35,19 @@ vim.api.nvim_create_autocmd("FileType", {
 --         end
 --     end,
 -- })
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = customAutos,
+    callback = function()
+        vim.hl.on_yank()
+    end,
+})
+
+-- Resize splits on (terminal) window resize
+vim.api.nvim_create_autocmd("VimResized", {
+    group = customAutos,
+    callback = function()
+        vim.cmd("tabdo wincmd =")
+    end,
+})
