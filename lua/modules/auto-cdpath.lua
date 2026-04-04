@@ -92,7 +92,7 @@ local function mergeOpts(opts)
 end
 
 local function getSiteOpts()
-    siteOpts = utils.siteConfigLookup('autoCdPath')
+    local siteOpts = utils.siteConfigLookup('autoCdPath')
 
     -- Explicitly disbale if config not found
     if not utils.tableValid(siteOpts) then

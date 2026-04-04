@@ -22,6 +22,9 @@ function M.readTable(path)
     end
     local content = file:read("*a")
     file:close()
+    if not content or #content == 0 then
+        return {}
+    end
     return vim.fn.json_decode(content)
 end
 
