@@ -17,6 +17,7 @@ local plugins = {
     require 'plugins.which-key',
     require 'plugins.window-picker',
     require 'plugins.smartcolumn',
+    require 'plugins.virt-column',
 }
 
 local opts = {}
