@@ -13,16 +13,16 @@ end
 
 vim.api.nvim_create_user_command(
     "RandomColorScheme",
-    function(opts)
-        exclude = { 'delek', 'murphy', 'pablo', 'ron', 'shine' }
-        schemes = tableDifference(
+    function()
+        local exclude = { 'delek', 'murphy', 'pablo', 'ron', 'shine' }
+        local schemes = tableDifference(
             vim.fn.getcompletion("", "color"),
             exclude)
 
         math.randomseed(os.time())
         vim.cmd.colorscheme(
             schemes[math.random(#schemes)])
-        print('colorscheme ' .. vim.g.colors_name)
+        print('RandomColorScheme: ' .. vim.g.colors_name)
     end,
     {}
 )
