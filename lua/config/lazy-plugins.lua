@@ -10,14 +10,15 @@ local plugins = {
     require 'plugins.neo-tree',
     require 'plugins.nvim-treesitter',
     require 'plugins.ouroboros',
+    require 'plugins.render-markdown',
+    require 'plugins.smartcolumn',
     require 'plugins.telescope',
     require 'plugins.telescope-file-browser',
     require 'plugins.todo-comments',
     require 'plugins.treesitter-context',
+    require 'plugins.virt-column',
     require 'plugins.which-key',
     require 'plugins.window-picker',
-    require 'plugins.smartcolumn',
-    require 'plugins.virt-column',
 }
 
 local opts = {}
