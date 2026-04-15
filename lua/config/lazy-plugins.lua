@@ -19,6 +19,7 @@ local plugins = {
     require 'plugins.virt-column',
     require 'plugins.which-key',
     require 'plugins.window-picker',
+    require 'plugins.yazi',
 }
 
 local opts = {}
