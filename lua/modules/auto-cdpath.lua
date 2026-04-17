@@ -94,7 +94,7 @@ end
 local function getSiteOpts()
     local siteOpts = utils.siteConfigLookup('autoCdPath')
 
-    -- Explicitly disbale if config not found
+    -- Explicitly disable if config not found
     if not utils.tableValid(siteOpts) then
         siteOpts = { enabled = false }
     end
