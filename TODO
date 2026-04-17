@@ -13,7 +13,6 @@
 - make context plugin always show owning func/class (not if/for/etc)
 - turn off completion for non-code files
 - custom cmd to copy selected block and comment out the original
-- display stray whitespace
 
 - Scrape kickstart.vim
 - Scrape work setups (comand, steinbach, etc)
@@ -29,3 +28,34 @@
 - harpoon plugin
 - snacks.vim plugin
 - note-taking plugin
+
+
+
+- display stray whitespace
+from claude:
+Add this to your nvim config:
+luavim.opt.list = true
+vim.opt.listchars = { trail = '•' }
+Replace • with whatever character you prefer, e.g. ·, ␣, or ~.
+
+set listchars=tab:»·,trail:·
+
+If you also want to highlight it more visibly:
+luavim.api.nvim_set_hl(0, 'TrailingWhitespace', { bg = 'red' })
+vim.fn.matchadd('TrailingWhitespace', [[\s\+$]])
+
+Or with a simple autocmd to only highlight in normal mode (avoids annoyance while typing):
+lualocal tw = vim.api.nvim_create_augroup('TrailingWhitespace', {})
+vim.api.nvim_create_autocmd('InsertLeave', {
+    group = tw,
+    callback = function()
+        vim.fn.matchadd('TrailingWhitespace', [[\s\+$]])
+    end,
+})
+vim.api.nvim_create_autocmd('InsertEnter', {
+    group = tw,
+    callback = function()
+        vim.fn.clearmatches()
+    end,
+})
+The listchars approach is the simplest; the highlight approach is more visually obvious.
