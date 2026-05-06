@@ -58,11 +58,13 @@ return {
             sections = {
                 -- FIXME tweak this some more
                 lualine_a = {'mode'},
-                lualine_b = { getTreeName, buffDirName },
+                -- lualine_b = { getTreeName, buffDirName },
+                lualine_b = { buffDirName },
                 lualine_c = { '%t %r%m' }, -- filename, read-only, modified
-                lualine_x = {'branch', 'diff', 'diagnostics'},
+                -- lualine_x = {'branch', 'diff', 'diagnostics'},
+                lualine_x = {},
                 lualine_y = {'filetype'},
-                lualine_z = {'progress', '%l:%c / %L'} -- % thru the file, line:char, total lines
+                lualine_z = {'%l:%c / %L', 'progress'} -- % thru the file, line:char, total lines
             },
             inactive_sections = {
                 lualine_a = {},
