@@ -1,5 +1,9 @@
 local plugins = {
     require 'plugins.colors.catppuccin',
+    require 'plugins.colors.gruvbox',
+    require 'plugins.colors.moonfly',
+    require 'plugins.colors.olive-crt',
+    require 'plugins.colors.primary',
     require 'plugins.colors.tokyonight',
     --
     require 'plugins.blink',
