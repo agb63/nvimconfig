@@ -30,9 +30,7 @@ local plugins = {
 -- site-local plugins
 local ok, sitePlugins = pcall(require, 'plugins.site-plugins')
 if ok then
-  for _, p in ipairs(sitePlugins) do
-    table.insert(plugins, p)
-  end
+    vim.list_extend(plugins, sitePlugins)
 end
 
 local opts = {}
