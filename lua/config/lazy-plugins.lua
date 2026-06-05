@@ -2,7 +2,9 @@ local plugins = {
     -- colorschemes
     require 'plugins.colors.catppuccin',
     require 'plugins.colors.gruvbox',
+    require 'plugins.colors.kape',
     require 'plugins.colors.moonfly',
+    require 'plugins.colors.muted',
     require 'plugins.colors.olive-crt',
     require 'plugins.colors.primary',
     require 'plugins.colors.tokyonight',
