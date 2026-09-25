@@ -1,5 +1,6 @@
 local plugins = {
     -- colorschemes
+    require 'plugins.colors.bluloco',
     require 'plugins.colors.catppuccin',
     require 'plugins.colors.gruvbox',
     require 'plugins.colors.kape',
